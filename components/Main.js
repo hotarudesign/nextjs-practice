@@ -1,18 +1,14 @@
-import Head from "next/head";
-import { Main } from "../components/Main";
-import { Footer } from "../components/Footer";
+import { Headine } from "../components/Headline";
+import { Links } from "../components/Links";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export function Main(props) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Index Page</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Main page="index" />
-      <Footer />
+    <main>
+      <Headine page={props.page}>
+        <code>pages/{props.page}.js</code>
+      </Headine>
+      <Links />
       <style jsx>{`
         main {
           padding: 5rem 0;
@@ -45,6 +41,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </main>
   );
 }

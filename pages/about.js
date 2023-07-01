@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Headine } from "../components/Headline";
-import { Links } from "../components/Links";
+import { Main } from "../components/Main";
 import { Footer } from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
@@ -12,13 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Headine page="about" />
-        <Links />
-      </main>
-
+      <Main page="about" />
       <Footer />
-
       <style jsx>{`
         main {
           padding: 5rem 0;
