@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 
 export function Headine(props) {
-  console.log(props.title);
   return (
     <div>
       <h1 className={styles.title}>{props.page} page</h1>
