@@ -1,7 +1,7 @@
+import classes from "src/components/Main/Main.module.css";
 import { Headine } from "src/components/Headline";
 import { Links } from "src/components/Links";
 import { useCallback, useState } from "react";
-import classes from "src/components/Main/Main.module.css";
 
 const ITEMS = [
   {
@@ -27,7 +27,7 @@ const ITEMS = [
   },
 ];
 
-export function Main(props) {
+export const Main = (props) => {
   const [items, setItems] = useState(ITEMS);
   const handleReduce = useCallback(() => {
     setItems((prevItems) => {
@@ -42,4 +42,4 @@ export function Main(props) {
       <Links items={items} />
     </main>
   );
-}
+};
