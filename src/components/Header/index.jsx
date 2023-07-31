@@ -10,11 +10,13 @@ const NAV_ITEMS = [
 
 export const Header = () => {
   return (
-    <header className={classes.header}>
+    <header className="flex justify-center items-center border-b w-full h-24">
       {NAV_ITEMS.map((item) => {
         return (
           <Link key={item.href} href={item.href} legacyBehavior>
-            <a className={classes.anchor}>{item.label}</a>
+            <a className="inline-block py-2 px-6 text-xl hover:text-blue-500  focus:text-blue-500  active:text-blue-500">
+              {item.label}
+            </a>
           </Link>
         );
       })}
