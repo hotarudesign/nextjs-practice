@@ -1,0 +1,21 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { usePost } from "src/hooks/usePost";
+
+export const PostByCommentId = (props) => {
+  const router = useRouter();
+  const { data, error, isLoading } = usePost(props.id);
+
+  if (isLoading) {
+    return <div>ローディング中</div>;
+  }
+  if (error) {
+    return <div>{error.message}</div>;
+  }
+
+  return (
+    <Link href={`/posts/${data?.id}`} legacyBehavior>
+      <a>{data?.title}</a>
+    </Link>
+  );
+};
