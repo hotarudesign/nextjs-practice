@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import { CommentsByPostId } from "src/components/Comments/commentsByPostId";
 import { UserByUserId } from "src/components/User/UserByUserId";
 import { usePost } from "src/hooks/usePost";
-import { fetcher } from "src/utils/fetcher";
-import useSWR from "swr";
 
 export const Post = () => {
   const router = useRouter();
